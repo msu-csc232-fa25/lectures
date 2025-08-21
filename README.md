@@ -1,5 +1,15 @@
 # Lectures
 
+## Lecture 1
+
+C++ Foundations
+
+* Covered project organization and the use of cmake to help manage this
+  organization
+* Discussed existing code in [csc232.h](include/csc232.h)
+* Identified the use of namespaces and why we use fully qualified class
+  names like `std::cout` instead of `using namespace std;` and just `cout`
+
 ## Lecture 2
 
 ![int-cell-class-diagram](src/main/resources/int-cell-class-diagram.png)
