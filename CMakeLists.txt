@@ -15,7 +15,10 @@ set(CMAKE_CXX_STANDARD 20)
 set(SRC_MAIN_FILES src/main/cpp/main.cpp
         src/main/cpp/expanded_templates.cpp)
 set(SRC_DEMO_FILES src/main/cpp/demo.cpp
-        src/main/cpp/expanded_templates.cpp)
+        src/main/cpp/expanded_templates.cpp
+        include/int_cell.h
+        src/main/cpp/int_memory_cell.cpp
+        include/int_memory_cell.h)
 set(SRC_TEST_TASK1 src/test/cpp/test_task1.cpp
         src/main/cpp/expanded_templates.cpp)
 set(SRC_TEST_TASK2 src/test/cpp/test_task2.cpp
