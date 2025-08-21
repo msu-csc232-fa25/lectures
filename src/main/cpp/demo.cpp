@@ -15,5 +15,13 @@
 
 auto main( ) -> int
 {
+    // we'll be introduced to std::string_view in homework 1
+    // quick overview: string_view is a typedef for std::basic_string_view<char>
+    // The class template std::basic_string_view describes an object that can refer
+    // to a constant contiguous sequence of characters with the first element of the
+    // sequence at position zero
+    constexpr std::string_view UUID_PREFIX{ "Generated UUID: " };
+
+    std::cout << UUID_PREFIX << csc232::generate_uuid( ) << std::endl;
     return EXIT_SUCCESS;
 }
