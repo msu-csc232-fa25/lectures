@@ -40,11 +40,11 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(main ${SRC_MAIN_FILES} "include/memory_cell.h" "include/cell.h")
-add_executable(demo ${SRC_DEMO_FILES} "include/memory_cell.h" "include/cell.h")
-add_executable(test_task1 ${SRC_TEST_TASK1} "include/memory_cell.h" "include/cell.h")
-add_executable(test_task2 ${SRC_TEST_TASK2} "include/memory_cell.h" "include/cell.h")
-add_executable(test_task3 ${SRC_TEST_TASK3} "include/memory_cell.h" "include/cell.h")
+add_executable(main ${SRC_MAIN_FILES})
+add_executable(demo ${SRC_DEMO_FILES})
+add_executable(test_task1 ${SRC_TEST_TASK1})
+add_executable(test_task2 ${SRC_TEST_TASK2})
+add_executable(test_task3 ${SRC_TEST_TASK3})
 
 # Now simply link against gtest or gtest_main as needed.
 target_link_libraries(test_task1 GTest::gtest_main)
