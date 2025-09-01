@@ -18,7 +18,8 @@ set(SRC_DEMO_FILES src/main/cpp/demo.cpp
         src/main/cpp/expanded_templates.cpp
         include/int_cell.h
         src/main/cpp/int_memory_cell.cpp
-        include/int_memory_cell.h)
+        include/int_memory_cell.h
+        src/main/cpp/memory_cell.cpp)
 set(SRC_TEST_TASK1 src/test/cpp/test_task1.cpp
         src/main/cpp/expanded_templates.cpp)
 set(SRC_TEST_TASK2 src/test/cpp/test_task2.cpp
@@ -39,11 +40,11 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(main ${SRC_MAIN_FILES})
-add_executable(demo ${SRC_DEMO_FILES})
-add_executable(test_task1 ${SRC_TEST_TASK1})
-add_executable(test_task2 ${SRC_TEST_TASK2})
-add_executable(test_task3 ${SRC_TEST_TASK3})
+add_executable(main ${SRC_MAIN_FILES} "include/memory_cell.h" "include/cell.h")
+add_executable(demo ${SRC_DEMO_FILES} "include/memory_cell.h" "include/cell.h")
+add_executable(test_task1 ${SRC_TEST_TASK1} "include/memory_cell.h" "include/cell.h")
+add_executable(test_task2 ${SRC_TEST_TASK2} "include/memory_cell.h" "include/cell.h")
+add_executable(test_task3 ${SRC_TEST_TASK3} "include/memory_cell.h" "include/cell.h")
 
 # Now simply link against gtest or gtest_main as needed.
 target_link_libraries(test_task1 GTest::gtest_main)
