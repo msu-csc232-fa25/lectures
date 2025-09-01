@@ -12,6 +12,7 @@
  */
 
 #include "csc232.h"
+#include "int_memory_cell.h"
 
 auto main( ) -> int
 {
@@ -23,5 +24,14 @@ auto main( ) -> int
     constexpr std::string_view UUID_PREFIX{ "Generated UUID: " };
 
     std::cout << UUID_PREFIX << csc232::generate_uuid( ) << std::endl;
+
+    csc232::int_memory_cell cell;
+
+    std::cout << "Initial int value: " << cell.read( ) << std::endl;
+    std::cout << "Writing the value 42 into the cell...\n";
+    constexpr int the_best_num{ 42 };
+    cell.write( the_best_num );
+    std::cout << "New value: " << cell.read( ) << std::endl;
+
     return EXIT_SUCCESS;
 }
