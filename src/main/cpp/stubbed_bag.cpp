@@ -11,7 +11,7 @@
  * @copyright Copyright (c) 2024
  */
 
-#include "../../../include/stubbed_bag.h"
+#include "stubbed_bag.h"
 
 namespace csc232
 {
