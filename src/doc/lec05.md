@@ -3,6 +3,14 @@
 As the last lecture was cancelled, we are picking up with array-based
 implementations today.
 
+## Agenda
+
+- [ ] Review [bag interface](../../include/bag.h)
+- [ ] Stubbed out implementation of bag interface
+    - [ ] [Stubbed out specification](../../include/stubbed_bag.h)
+    - [ ] [Stubbed out implementation](../main/cpp/stubbed_bag.cpp)
+- [ ] Array-based implementation of bag interface
+
 ## Reading
 
 From the Carrano & Henry textbook,

@@ -11,7 +11,8 @@ given lecture has taken place.
 | Tue | 2025-08-19 | 01          | [Review C++ Fundamentals](src/doc/lec01.md)     |
 | Thu | 2025-08-21 | 02          | [C++ Classes](src/doc/lec02.md)                 |
 | Tue | 2025-08-26 | 03          | [The ADT Bag](src/doc/lec03.md)                 |                                           
-| Thu | 2025-08-28 | 04          | [Array-based Implementations](src/doc/lec04.md) |                                           
+| Thu | 2025-08-28 | 04          | [Array-based Implementations](src/doc/lec04.md) |
+| Tue | 2025-09-02 | 05          | [Linked-based Implementation](src/doc/lec05.md) |                                               
 
 ## Disclaimer & Fair Use Statement
 
