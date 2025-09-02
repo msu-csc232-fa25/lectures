@@ -69,7 +69,7 @@ namespace csc232
         item_type items_[ DEFAULT_CAPACITY ];
         int item_count_;
         int max_items_;
-        int get_index_of( const item_type &target ) const;
+        auto get_index_of( const item_type &target ) const -> int;
     };
 
 }
