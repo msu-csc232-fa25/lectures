@@ -1,7 +1,7 @@
-# Lecture 4 - Array-based Implementations
+# Lecture 5 - Link-based Implementation
 
-This lecture, unfortunately due to unforeseen circumstances, was cancelled
-last minute.
+As the last lecture was cancelled, we are picking up with array-based
+implementations today.
 
 ## Reading
 
