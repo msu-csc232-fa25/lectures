@@ -22,7 +22,7 @@ set(SRC_DEMO_FILES src/main/cpp/demo.cpp
         src/main/cpp/memory_cell.cpp)
 
 set(SRC_BAG_STUB_DEMO
-        src/main/cpp/bag_demo.cpp
+        src/main/cpp/stubbed_bag_demo.cpp
         src/main/cpp/stubbed_bag.cpp)
 
 set(SRC_TEST_TASK1 src/test/cpp/test_task1.cpp
