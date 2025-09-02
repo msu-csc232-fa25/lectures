@@ -70,7 +70,7 @@ namespace csc232
          * Utility method to provide a vector copy of the contents of this bag.
          * @return a vector copy of the contents of this bag.
          */
-        virtual auto to_vector( ) const -> std::vector< item_type > = 0;
+        [[nodiscard]] virtual auto to_vector( ) const -> std::vector< item_type > = 0;
     };
 }
 #endif // CSC232_BAG_H
