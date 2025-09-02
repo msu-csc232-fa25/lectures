@@ -31,7 +31,7 @@ namespace csc232
         auto clear( ) -> void override;
         auto get_frequency_of( const item_type &target ) const -> int override;
         auto contains( const item_type &target ) const -> bool override;
-        auto to_vector( ) const -> std::vector< item_type > override;
+        [[nodiscard]] auto to_vector( ) const -> std::vector< item_type > override;
     };
 
 } // csc232
