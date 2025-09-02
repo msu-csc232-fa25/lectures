@@ -6,7 +6,7 @@
 #include <string>
 
 template < typename item_type >
-int csc232::array_bag< item_type >::get_index_of( const item_type &target ) const
+auto csc232::array_bag< item_type >::get_index_of( const item_type &target ) const -> int
 {
     auto found{ false };
     auto result{ -1 };
