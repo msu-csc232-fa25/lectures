@@ -8,7 +8,23 @@
 template < typename item_type >
 int csc232::array_bag< item_type >::get_index_of( const item_type &target ) const
 {
-    return 0;
+    auto found{ false };
+    auto result{ -1 };
+    auto search_index{ 0 };
+    // if bag is empty, item_count_ is zero, so loop is skipped
+    while ( !found && ( search_index < item_count_ ) )
+    {
+        found = items_[ search_index ] == target;
+        if ( found )
+        {
+            result = search_index;
+        }
+        else
+        {
+            ++search_index;
+        }
+    }
+    return result;
 }
 
 template < typename item_type >
@@ -46,25 +62,40 @@ auto csc232::array_bag< item_type >::add( const item_type &some_item ) -> bool
 template < typename item_type >
 auto csc232::array_bag< item_type >::remove( const item_type &some_item ) -> bool
 {
-    return false; // stub
+    auto located_index{ get_index_of( some_item ) };
+    auto can_remove_item{ !is_empty( ) && ( located_index > -1 ) };
+    if ( can_remove_item )
+    {
+        item_count_--;
+        items_[ located_index ] = items_[ item_count_ ];
+    }
+    return can_remove_item; // stub
 }
 
 template < typename item_type >
 auto csc232::array_bag< item_type >::clear( ) -> void
 {
-    // stub
+    item_count_ = 0;
 }
 
 template < typename item_type >
 auto csc232::array_bag< item_type >::get_frequency_of( const item_type &target ) const -> int
 {
-    return 0;
+    auto frequency{ 0 };
+    for ( auto current_item : items_ )
+    {
+        if ( current_item == target )
+        {
+            frequency++;
+        }
+    }
+    return frequency;
 }
 
 template < typename item_type >
 auto csc232::array_bag< item_type >::contains( const item_type &target ) const -> bool
 {
-    return false;
+    return get_frequency_of( target ) > 0;
 }
 
 template < typename item_type >
