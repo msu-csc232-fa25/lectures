@@ -1,6 +1,15 @@
-//
-// Created by jrd2112 on 9/2/2025.
-//
+/**
+ * CSC232 - Data Structures
+ * Missouri State University, Fall 2025
+ *
+ * @file    array_bag.cpp
+ * @author  Jim Daehn <jdaehn@missouristate.edu>
+ * @brief   Array-bag implementation source file.
+ * @version 1.0.0
+ * @date    09/01/2025
+ *
+ * @copyright Copyright (c) 2025 James R. Daehn
+ */
 
 #include "array_bag.h"
 #include <string>
@@ -109,6 +118,7 @@ auto csc232::array_bag< item_type >::to_vector( ) const -> std::vector< item_typ
     return result;
 }
 
+// Explicit template instantiation for common types
 template class csc232::array_bag< char >;
 template class csc232::array_bag< int >;
 template class csc232::array_bag< std::string >;

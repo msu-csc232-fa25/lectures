@@ -2,36 +2,45 @@
  * CSC232 - Data Structures
  * Missouri State University, Fall 2025
  *
- * @file    array_bag.h
+ * @file    linked_bag.h
  * @author  Jim Daehn <jdaehn@missouristate.edu>
- * @brief   Array-bag specification.
+ * @brief   linked_bag specification.
  * @version 1.0.0
  * @date    09/01/2025
  *
  * @copyright Copyright (c) 2025 James R. Daehn
  */
 
-#ifndef CSC232_ARRAY_BAG_H
-#define CSC232_ARRAY_BAG_H
+#ifndef LECTURES_LINKED_BAG_H
+#define LECTURES_LINKED_BAG_H
 
 #include "bag.h"
+#include "node.h"
 
 namespace csc232
 {
-
+    /**
+     * A linked-based implementation of the bag interface.
+     * @tparam item_type the type of item contained in this bag.
+     */
     template < typename item_type >
-    class array_bag : public bag< item_type >
+    class linked_bag final : public bag< item_type >
     {
     public:
         /**
          * Default constructor.
          */
-        array_bag( );
+        linked_bag( );
+        /**
+         * Copy constructor that makes a deep copy of another linked_bag.
+         * @param src the source bag used to construct this bag.
+         */
+        linked_bag( const linked_bag &src );
 
         /**
-         * @copydoc bag<item_type>::~bag
+         * Virtual destructor.
          */
-        ~array_bag( ) override;
+        ~linked_bag( ) override;
 
         /**
          * @copydoc bag<item_type>::get_current_size
@@ -74,13 +83,18 @@ namespace csc232
         [[nodiscard]] auto to_vector( ) const -> std::vector< item_type > override;
 
     private:
-        static constexpr int DEFAULT_CAPACITY{ 6 };
-        item_type items_[ DEFAULT_CAPACITY ];
+        node< item_type > *head_ptr_;
         int item_count_;
-        int max_items_;
-        auto get_index_of( const item_type &target ) const -> int;
+        /**
+         *
+         *
+         * @param item the item whose node we seek
+         * @return a pointer to the first node containing the item, or the nullptr if
+         *         the item does not exist in this bag.
+         */
+        auto get_pointer_to( const item_type &item ) const -> node< item_type > *;
     };
 
-}
+} // csc232
 
-#endif // CSC232_ARRAY_BAG_H
+#endif // LECTURES_LINKED_BAG_H

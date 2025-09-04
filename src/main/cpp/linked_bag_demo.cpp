@@ -2,18 +2,18 @@
  * CSC232 - Data Structures
  * Missouri State University, Fall 2025
  *
- * @file    array_bag_demo.cpp
+ * @file    linked_bag_demo.cpp
  * @author  Jim Daehn <jdaehn@missouristate.edu>
- * @brief   Entry point of the array_bag_demo target.
+ * @brief   Entry-point of linked_bag_demo target.
  * @version 1.0.0
  * @date    09/03/2025
  *
  * @copyright Copyright (c) 2025 James R. Daehn
  */
 
-#include "array_bag.h"
 #include "bag.h"
-#include <cstdlib>
+#include "linked_bag.h"
+#include <iomanip>
 #include <iostream>
 
 void display_bag( const csc232::bag< std::string > &bag )
@@ -33,8 +33,7 @@ void bag_tester( csc232::bag< std::string > &bag )
     std::cout << "is_empty returns: " << std::boolalpha << bag.is_empty( );
     std::cout << "; should be true" << std::endl;
     display_bag( bag );
-    std::string test_list[] = { "one", "two", "three", "four", "five", "one" };
-    for ( auto current_item : test_list )
+    for ( std::string test_list[] = { "one", "two", "three", "four", "five", "one" }; auto current_item : test_list )
     {
         bag.add( current_item );
     }
@@ -50,7 +49,7 @@ void bag_tester( csc232::bag< std::string > &bag )
 
 auto main( ) -> int
 {
-    auto bag{ csc232::array_bag< std::string >( ) };
+    auto bag{ csc232::linked_bag< std::string >( ) };
     std::cout << "Testing the array-based bag: " << std::endl;
     std::cout << "The initial bag is empty" << std::endl;
     bag_tester( bag );
