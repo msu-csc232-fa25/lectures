@@ -141,9 +141,8 @@ namespace csc232
     }
 
     template < typename item_type >
-    linked_bag< item_type >::linked_bag( const linked_bag &src ) : head_ptr_( nullptr ), item_count_( 0 )
+    linked_bag< item_type >::linked_bag( const linked_bag &src ) : head_ptr_{ nullptr }, item_count_{ src.item_count_ }
     {
-        item_count_ = src.item_count_;
         auto original_chain_ptr = src.head_ptr_;
         // nodes in original chain
         if ( original_chain_ptr == nullptr )
