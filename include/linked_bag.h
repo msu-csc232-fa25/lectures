@@ -1,6 +1,15 @@
-//
-// Created by jrd2112 on 9/3/2025.
-//
+/**
+ * CSC232 - Data Structures
+ * Missouri State University, Fall 2025
+ *
+ * @file    linked_bag.h
+ * @author  Jim Daehn <jdaehn@missouristate.edu>
+ * @brief   linked_bag specification.
+ * @version 1.0.0
+ * @date    09/01/2025
+ *
+ * @copyright Copyright (c) 2025 James R. Daehn
+ */
 
 #ifndef LECTURES_LINKED_BAG_H
 #define LECTURES_LINKED_BAG_H

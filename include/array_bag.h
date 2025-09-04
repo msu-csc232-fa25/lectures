@@ -1,6 +1,15 @@
-//
-// Created by jrd2112 on 9/2/2025.
-//
+/**
+ * CSC232 - Data Structures
+ * Missouri State University, Fall 2025
+ *
+ * @file    array_bag.h
+ * @author  Jim Daehn <jdaehn@missouristate.edu>
+ * @brief   Array-bag specification.
+ * @version 1.0.0
+ * @date    09/01/2025
+ *
+ * @copyright Copyright (c) 2025 James R. Daehn
+ */
 
 #ifndef CSC232_ARRAY_BAG_H
 #define CSC232_ARRAY_BAG_H
