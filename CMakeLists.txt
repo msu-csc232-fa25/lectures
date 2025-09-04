@@ -23,10 +23,15 @@ set(SRC_DEMO_FILES src/main/cpp/demo.cpp
 set(SRC_BAG_STUB_DEMO
         src/main/cpp/stubbed_bag_demo.cpp
         src/main/cpp/stubbed_bag.cpp)
-
 set(SRC_ARRAY_BAG_DEMO
         src/main/cpp/array_bag_demo.cpp
         src/main/cpp/array_bag.cpp
+)
+
+set(SRC_LINKED_BAG_DEMO
+        src/main/cpp/linked_bag_demo.cpp
+        src/main/cpp/linked_bag.cpp
+        src/main/cpp/node.cpp
 )
 
 set(SRC_TEST_TASK1 src/test/cpp/test_task1.cpp
@@ -53,6 +58,7 @@ add_executable(main ${SRC_MAIN_FILES})
 add_executable(demo ${SRC_DEMO_FILES})
 add_executable(bag_stub_demo ${SRC_BAG_STUB_DEMO})
 add_executable(array_bag_demo ${SRC_ARRAY_BAG_DEMO})
+add_executable(linked_bag_demo ${SRC_LINKED_BAG_DEMO})
 add_executable(test_task1 ${SRC_TEST_TASK1})
 add_executable(test_task2 ${SRC_TEST_TASK2})
 add_executable(test_task3 ${SRC_TEST_TASK3})
@@ -71,6 +77,8 @@ target_include_directories(main PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE
 target_include_directories(demo PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_LIST_DIR}/src/main/cpp)
 target_include_directories(bag_stub_demo PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_LIST_DIR}/src/main/cpp)
 target_include_directories(array_bag_demo PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_LIST_DIR}/src/main/cpp)
+
+target_include_directories(linked_bag_demo PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_LIST_DIR}/src/main/cpp)
 
 target_include_directories(test_task1 PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_LIST_DIR}/src/main/cpp)
 target_include_directories(test_task2 PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include ${CMAKE_CURRENT_LIST_DIR}/src/main/cpp)

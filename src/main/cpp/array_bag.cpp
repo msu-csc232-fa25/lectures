@@ -109,6 +109,7 @@ auto csc232::array_bag< item_type >::to_vector( ) const -> std::vector< item_typ
     return result;
 }
 
+// Explicit template instantiation for common types
 template class csc232::array_bag< char >;
 template class csc232::array_bag< int >;
 template class csc232::array_bag< std::string >;
