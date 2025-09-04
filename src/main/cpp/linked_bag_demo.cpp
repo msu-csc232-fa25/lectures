@@ -1,3 +1,16 @@
+/**
+ * CSC232 - Data Structures
+ * Missouri State University, Fall 2025
+ *
+ * @file    linked_bag_demo.cpp
+ * @author  Jim Daehn <jdaehn@missouristate.edu>
+ * @brief   Entry-point of linked_bag_demo target.
+ * @version 1.0.0
+ * @date    09/03/2025
+ *
+ * @copyright Copyright (c) 2025 James R. Daehn
+ */
+
 #include "bag.h"
 #include "linked_bag.h"
 #include <iomanip>

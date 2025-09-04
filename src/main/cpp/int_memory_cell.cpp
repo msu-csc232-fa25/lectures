@@ -1,6 +1,15 @@
-//
-// Created by jrd2112 on 8/21/2025.
-//
+/**
+ * CSC232 - Data Structures
+ * Missouri State University, Fall 2025
+ *
+ * @file    int_memory_cell.cpp
+ * @author  Jim Daehn <jdaehn@missouristate.edu>
+ * @brief   Int-memory-cell implementation source file.
+ * @version 1.0.0
+ * @date    09/03/2025
+ *
+ * @copyright Copyright (c) 2025 James R. Daehn
+ */
 
 #include "int_memory_cell.h"
 
